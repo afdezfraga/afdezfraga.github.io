@@ -1,5 +1,5 @@
 # retoDevOps
-Reto DevOps integrando Scrapy, GitHub API, GitHub Actions y más para obtener informacion de los repositorios más populares.
+Reto DevOps integrando Scrapy, GitHub API, GitHub Actions y más para obtener información de los repositorios más populares.
 
 ## Scrapy
 
@@ -31,7 +31,7 @@ python -m pip install requests
 ### Correr el script
 
 - Tras ejecutar el spider se necesita volver a la carpeta raiz del proyecto
-- Desde ahí llamar al script pasando como parametros archivo de entrada y archivo de salida
+- Desde ahí llamar al script pasando como parámetros archivo de entrada y archivo de salida
 
 ``` sh
 cd ..
