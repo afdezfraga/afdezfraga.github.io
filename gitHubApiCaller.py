@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import requests
-import json
 import sys
 
 BASE_URL = "https://api.github.com"
@@ -26,19 +25,6 @@ class CommitedRepo():
 
     def __str__(self):
         return str(self.top) + "," + self.author + "," + self.name + "," + str(self.commits)
-
-'''
-def printJsonGetResponse(url, headers):
-
-    answer = requests.get(url, headers=headers)
-
-    if answer.status_code != 200:
-        print("Error !!!")
-
-    jsonAnswer = json.loads(answer.text)
-    #print(json.dumps(jsonAnswer, indent=4))
-    print(json.dumps(jsonAnswer[0], indent=4))#DBG
-    print(len(jsonAnswer))#DBG'''
 
 def parseHeaders(page1Headers):
         links = page1Headers["Link"]
