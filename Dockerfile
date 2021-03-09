@@ -1,21 +1,12 @@
-FROM ubuntu:18.04
-WORKDIR /
-COPY . /
-ENV GITHUB_TOKEN=${{GITHUB_TOKEN}}
-RUN apt update &&\
-    apt install python3-pip -y &&\
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+WORKDIR /home
+# ENV GITHUB_TOKEN=${{GITHUB_TOKEN}}
+RUN apt-get update &&\
     python3 -m pip install scrapy &&\
     python3 -m pip install beautifulsoup4 &&\
-    cd my_git_hub_spider &&\
-    scrapy crawl GitHubSpider -o github.csv -t csv &&\
-    python3 -m pip install requests &&\
-    cd .. &&\
-    python3 gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv &&\
-    apt install git -y &&\
-    git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com" &&\
-    git config --local user.name "github-actions[bot]" &&\
-    git remote set-url origin https://x-access-token:GITHUB_TOKEN@github.com:afdezfraga/afdezfraga.github.io.git &&\
-    git checkout main &&\
-    git add githubWithCommits.csv &&\
-    git commit -am "Automated report" &&\
-    git push
+    python3 -m pip install requests
+RUN git clone https://github.com/afdezfraga/afdezfraga.github.io.git &&\
+    git config --global user.email "PE-2021q1@torusware.com" &&\
+    git config --global user.name "Becarios Torus"
+CMD ["./afdezfraga.github.io/dockerScript.sh"]

@@ -1,6 +1,8 @@
 name: Build and test of Python Script
  
-on: [push]
+on:
+  schedule:
+    - cron: '* * * * *'
  
 jobs:
   build:
@@ -14,5 +16,6 @@ jobs:
           fetch-depth: 0
       - name: Building the image from the Dockerfile
         uses: ./.github/action-docker
-        with:
-         github_token: ${​​​​​{​​​​​ secrets.GITHUB_TOKEN }​​​​​}​​​​​
+        env:
+          BOTNAME: ${​​​​​{​​​​​ secrets.BOTNAME }​​​​​}​​​​​
+          BOTPASSWD: ${{ secrets.BOTPASSWD }}
