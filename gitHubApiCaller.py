@@ -3,10 +3,15 @@
 import requests
 import json
 import sys
+from bs4 import BeautifulSoup
 
 BASE_URL = "https://api.github.com"
 COMMITS_URL = BASE_URL + "/repos/{owner}/{repo}/commits"
+SECRETS_URL = BASE_URL + "/search/code?q=token+user:{username}"
+
 BASE_HEADER = {"Accept": "application/vnd.github.v3+json"}
+TMP_AUTH_HEADER = BASE_HEADER.copy()
+TMP_AUTH_HEADER["Authorization"] = "token " + "Token falso por si la lio y lo subo a git"
 
 
 class CommitedRepo():
@@ -46,11 +51,56 @@ def ListToFile(lista, outputFile):
     outputFile.write("Top,Author,Name,Commits\n")
     for i in lista:
         outputFile.write(str(i) + "\n")
+
+def SecretsToFile(secrets, outputFile):
+    outputFile.write("Repository,SearchKey,File,Line,Value\n")
+    for s in secrets:
+        outputFile.write(str(s) + "\n")
     
 
+def findSecrets(user):
+    answer = requests.get(SECRETS_URL.format(username=user), BASE_HEADER)
+    jsonValue = json.loads(answer.text)
+    listJson = jsonValue["items"]
+    secretsList = []
+    for m in listJson:
+        listOfTuples = getInfoFromCode(m['html_url'])
+        for t in listOfTuples:
+            secretsList.append(m["repository"]["name"] + "," + "Token" + "," + m["path"] + "," + t[0] + "," + t[1])
+    #print(secretsList)
+    return secretsList
+
+def parseLine(td):
+    line = ""
+    for x in td:
+        if str(type(x)) == "<class 'bs4.element.Tag'>":
+            line += x.get_text()
+        else:
+            line += str(x)
+    return line
 
 
-def main(inputFile, outputFile):
+def getValueFromTd(td):
+    line = parseLine(td)
+    if "token" in line.lower():
+        return line
+    return None
+
+def getInfoFromCode(linkUrl):
+    page = requests.get(linkUrl)
+    soup = BeautifulSoup(page.text, 'html.parser')
+    lineList = soup.find_all('tr')
+    okLines = []
+    for line in lineList:
+        numInfo, genInfo = line.find_all('td')
+        value = getValueFromTd(genInfo)
+        if value is not None:
+            okLines.append( (numInfo['data-line-number'], value) )
+
+    return okLines
+
+
+def main(inputFile, outputFile, secretsFile):
 
     #lee todas las líneas
     lines = inputFile.readlines()
@@ -77,23 +127,27 @@ def main(inputFile, outputFile):
     #escribe la lista al archivo de salida
     ListToFile(repoList, outputFile)
 
+    secrets = findSecrets("afdezfraga")
+    SecretsToFile(secrets, secretsFile)
+
 
 if __name__ == "__main__":
+
     
+
     with open(sys.argv[1]) as inputFile :
         with open(sys.argv[2], "x") as outputFile:
-            #main(inputFile, outputFile)
-            pass
+            with open(sys.argv[3], "x") as secretsFile:
+                main(inputFile, outputFile, secretsFile)
 
 
     ### DBG
-
-    TMP_AUTH_HEADER = BASE_HEADER.copy()
-    TMP_AUTH_HEADER["Authorization"] = "token " + "Token falso por si la lio y lo subo a git"
-
+    '''
     ans1 = requests.get("https://api.github.com/search/repositories?q=user:afdezfraga", headers=BASE_HEADER)
 
     ans2 = requests.get("https://api.github.com/search/repositories?q=user:afdezfraga", headers=TMP_AUTH_HEADER)
+
+    ans3 = requests.get("https://api.github.com/search/code?q=token+user:afdezfraga", headers=BASE_HEADER)
 
     print(json.dumps(json.loads(ans1.text), indent=4))
 
@@ -101,7 +155,7 @@ if __name__ == "__main__":
         print("----------------------")
 
     print(json.dumps(json.loads(ans2.text), indent=4))
-
+    '''
     #NOTESE la diferencia en total_count
 
     #la primera petición me devuelve 
