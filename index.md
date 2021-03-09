@@ -8,7 +8,7 @@ Syntax highlighted code block
 	<title>Github page</title>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript src="./javascript.js"></script>
+    <script type="text/javascript" src="./javascript.js"></script>
   </head>
   <body>
     <h1>Hola mundo etc</h1>
