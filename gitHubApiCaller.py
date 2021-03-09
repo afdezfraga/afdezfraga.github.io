@@ -13,6 +13,8 @@ BASE_HEADER = {"Accept": "application/vnd.github.v3+json"}
 TMP_AUTH_HEADER = BASE_HEADER.copy()
 TMP_AUTH_HEADER["Authorization"] = "token " + "Token falso por si la lio y lo subo a git"
 
+DEFAULT_SECRETS_FILENAME = "./secrets.csv"
+
 
 class CommitedRepo():
     
@@ -127,18 +129,25 @@ def main(inputFile, outputFile, secretsFile):
     #escribe la lista al archivo de salida
     ListToFile(repoList, outputFile)
 
-    secrets = findSecrets("afdezfraga")
-    SecretsToFile(secrets, secretsFile)
+    if secretsFile is not None:
+        secrets = findSecrets("afdezfraga")
+        SecretsToFile(secrets, secretsFile)
 
 
 if __name__ == "__main__":
 
-    
+    try:
+        secretFile = open(sys.argv[3], "x")
+    except:
+        secretsFile = None
+
 
     with open(sys.argv[1]) as inputFile :
         with open(sys.argv[2], "x") as outputFile:
-            with open(sys.argv[3], "x") as secretsFile:
-                main(inputFile, outputFile, secretsFile)
+            main(inputFile, outputFile, secretsFile)
+
+    if secretsFile is not None:
+        secretFile.close()
 
 
     ### DBG
