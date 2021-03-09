@@ -1,5 +1,7 @@
 cd /home/afdezfraga.github.io
 
+git pull
+
 rm ./githubWithCommits.csv ./my_git_hub_spider/github.csv
 
 cd my_git_hub_spider
