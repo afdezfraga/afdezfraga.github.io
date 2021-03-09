@@ -8,5 +8,6 @@ RUN apt update &&\
     scrapy crawl GitHubSpider -o github.csv -t csv &&\
     python3 -m pip install requests &&\
     cd .. &&\
-    python3 gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv
+    python3 gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv &&\
+    
 CMD ["cat", "githubWithCommits.csv"]
