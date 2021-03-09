@@ -1,3 +1,5 @@
+cd /home/afdezfraga.github.io
+
 touch f.txt
 
 git add f.txt
