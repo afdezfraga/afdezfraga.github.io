@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import requests
+import json
 import sys
 
 BASE_URL = "https://api.github.com"
@@ -81,4 +82,40 @@ if __name__ == "__main__":
     
     with open(sys.argv[1]) as inputFile :
         with open(sys.argv[2], "x") as outputFile:
-            main(inputFile, outputFile)
+            #main(inputFile, outputFile)
+            pass
+
+
+    ### DBG
+
+    TMP_AUTH_HEADER = BASE_HEADER.copy()
+    TMP_AUTH_HEADER["Authorization"] = "token " + "Token falso por si la lio y lo subo a git"
+
+    ans1 = requests.get("https://api.github.com/search/repositories?q=user:afdezfraga", headers=BASE_HEADER)
+
+    ans2 = requests.get("https://api.github.com/search/repositories?q=user:afdezfraga", headers=TMP_AUTH_HEADER)
+
+    print(json.dumps(json.loads(ans1.text), indent=4))
+
+    for i in range(10):
+        print("----------------------")
+
+    print(json.dumps(json.loads(ans2.text), indent=4))
+
+    #NOTESE la diferencia en total_count
+
+    #la primera petición me devuelve 
+    #{
+    #    "total_count": 3,
+    #   "incomplete_results": false,
+    #    "items": [
+    #       ...
+    #
+
+    #la segunda petición me devuelve 
+    #{
+    #    "total_count": 7,
+    #   "incomplete_results": false,
+    #    "items": [
+    #       ...
+    #
