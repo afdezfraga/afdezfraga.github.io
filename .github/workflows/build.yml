@@ -18,7 +18,8 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Building the image from the Dockerfile
-        uses: ./.github/action-docker
         env:
-          BOTNAME: ${​​​​​{​​​​​ secrets.BOTNAME }​​​​​}​​​​​
+          BOTNAME: ${{ secrets.BOTNAME }}
           BOTPASSWD: ${{ secrets.BOTPASSWD }}
+        uses: ./.github/action-docker
+        
