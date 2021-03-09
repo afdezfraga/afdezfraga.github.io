@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 WORKDIR /
 COPY . /
-ENV: GITHUB_TOKEN
+ENV GITHUB_TOKEN=${{GITHUB_TOKEN}}
 RUN apt update &&\
     apt install python3-pip -y &&\
     python3 -m pip install scrapy &&\

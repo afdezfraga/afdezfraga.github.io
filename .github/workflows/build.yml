@@ -9,5 +9,10 @@ jobs:
  
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Building the image from the Dockerfile
         uses: ./.github/action-docker
+        with:
+	  GITHUB_TOKEN: ${​​​​​{​​​​​ secrets.GITHUB_TOKEN }​​​​​}​​​​​
