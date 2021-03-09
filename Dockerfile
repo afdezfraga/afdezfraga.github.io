@@ -7,7 +7,5 @@ RUN apt-get update &&\
     python3 -m pip install beautifulsoup4 &&\
     python3 -m pip install requests
 RUN git clone https://github.com/afdezfraga/afdezfraga.github.io.git &&\
-    git config --global user.email "PE-2021q1@torusware.com" &&\
-    git config --global user.name "Becarios Torus" &&\
     chmod 775 /home/afdezfraga.github.io/dockerScript.sh
 ENTRYPOINT ["/bin/bash", "/home/afdezfraga.github.io/dockerScript.sh"]

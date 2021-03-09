@@ -1,16 +1,17 @@
 cd /home/afdezfraga.github.io
 
-echo `pwd`
+cd my_git_hub_spider
+scrapy crawl GitHubSpider -o github.csv -t csv
 
-touch f.txt
+cd .. 
+python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv
 
-git add f.txt
+git add ./githubWithCommits.csv
 
-echo add bien
+git config --global user.email "PE-2021q1gi@torusware.com"
+git config --global user.name "Becarios Torus"
 
 git commit -m "actualizacion periodica con fecha $(date)"
-
-echo commit bien
 
 echo $BOTNAME
 echo $BOTPASSWD
