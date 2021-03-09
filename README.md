@@ -22,10 +22,11 @@ scrapy crawl GitHubSpider -o github.csv -t csv
 
 ### Requerimientos
 
-- Requiere instalar el modulo requests 
+- Requiere instalar el modulo requests y el modulo beatifulsoup
 
 ``` sh
 python -m pip install requests
+python -m pip install beautifulsoup4
 ```
 
 ### Correr el script
@@ -38,4 +39,13 @@ cd ..
 python gitHubApiCaller.py <inputFile> <outputFile>
 echo Por ejemplo: 
 python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv
+```
+
+- El script hacepta un tercer argumento adicional para buscar secretos en los repositorios de un usuario
+
+ ``` sh
+cd ..
+python gitHubApiCaller.py <inputFile> <outputFile> <secretsFile>
+echo Por ejemplo: 
+python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv ./afdezfragaSecrets.csv
 ```
