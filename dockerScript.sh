@@ -1,5 +1,7 @@
 cd /home/afdezfraga.github.io
 
+echo `pwd`
+
 touch f.txt
 
 git add f.txt
