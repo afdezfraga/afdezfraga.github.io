@@ -3,6 +3,9 @@ name: Build and test of Python Script
 on:
   schedule:
     - cron: '*/5 * * * *'
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
  
 jobs:
   build:
@@ -15,7 +18,8 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Building the image from the Dockerfile
-        uses: ./.github/action-docker
         env:
-          BOTNAME: ${​​​​​{​​​​​ secrets.BOTNAME }​​​​​}​​​​​
+          BOTNAME: ${{ secrets.BOTNAME }}
           BOTPASSWD: ${{ secrets.BOTPASSWD }}
+        uses: ./.github/action-docker
+        
