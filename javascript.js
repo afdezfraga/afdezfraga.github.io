@@ -45,12 +45,9 @@
      	
     ]);
 
-      // Create the data table.
-    var data2 = new google.visualization.DataTable();
-    data2.addColumn('string', 'Name');
-    data2.addColumn('number', 'Commits');
-    data2.addRows([
-	['alievk/avatarify-python', 351],
+    // Create the data table.
+    var data2 = new google.visualization.arrayToDataTable([
+  ['alievk/avatarify-python', 351],
      	['dapr/dapr', 1613],
      	['jart/cosmopolitan', 236],
      	['tauri-apps/tauri', 969],
@@ -79,17 +76,12 @@
     ]);
 
     // Set chart options
-    var options = {};
+    var options = {'width':'100%','height':'100%'};
 
     var options2 = {
         title: 'Top trending GitHub repos',
         hAxis: {
           title: 'Repository name',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
         },
         vAxis: {
           title: 'Number of commits'
