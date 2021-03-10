@@ -54,4 +54,3 @@
     var chart = new google.visualization.Table(document.getElementById('chart_div'));
     chart.draw(data, options);
   }
-</script>
