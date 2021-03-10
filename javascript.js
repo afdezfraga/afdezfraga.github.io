@@ -84,7 +84,9 @@
     var options2 = {
         title: 'Top trending GitHub repos',
         hAxis: {
-          title: 'Repository name',
+          title: 'Author/Repository name',
+          slantedText: true,
+          slantedTextAngle: 45
         },
         vAxis: {
           title: 'Number of commits'
