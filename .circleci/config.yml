@@ -14,4 +14,4 @@ jobs:
       - setup_remote_docker
       - run:
           name: "Build Docker Images"
-          command: ./build-images.sh
+          command: sh ./build-images.sh
