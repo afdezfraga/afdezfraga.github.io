@@ -1,11 +1,11 @@
 Top,Author,Name,Commits
 1,alievk,avatarify-python,351
-2,dapr,dapr,1612
-3,jart,cosmopolitan,234
-4,tauri-apps,tauri,964
+2,dapr,dapr,1613
+3,jart,cosmopolitan,236
+4,tauri-apps,tauri,965
 5,qeeqbox,social-analyzer,433
 6,android,compose-samples,978
-7,dolthub,dolt,8567
+7,dolthub,dolt,8580
 8,CoatiSoftware,Sourcetrail,2735
 9,iam-abbas,Reddit-Stock-Trends,163
 10,ethereum-mining,ethminer,14334
@@ -16,9 +16,9 @@ Top,Author,Name,Commits
 15,rxi,lite,200
 16,tgbot-collection,YYeTsBot,138
 17,MostlyAdequate,mostly-adequate-guide,846
-18,input-output-hk,cardano-node,3987
+18,input-output-hk,cardano-node,3996
 19,bitwarden,server,2823
-20,freqtrade,freqtrade,11144
+20,freqtrade,freqtrade,11147
 21,Immediate-Mode-UI,Nuklear,1857
 22,dogecoin,dogecoin,13532
 23,dani-garcia,bitwarden_rs,1425
