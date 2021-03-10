@@ -89,7 +89,7 @@
         vAxis: {
           title: 'Author/Repository name'
         },
-        'width':'1300','height':'700'
+        'width':'1100','height':'900'
       };
 
     // Instantiate and draw our chart, passing in some options.
