@@ -14,6 +14,7 @@ Syntax highlighted code block
     <h1>Hola mundo etc</h1>
 	<br>
     <!--Div that will hold the pie chart-->
+    <div id="chart_div2"></div>
     <div id="chart_div"></div>
   </body>
 </html>
