@@ -22,28 +22,20 @@
      	{% endfor %}
     ]);
 
-      // Create the data table.
-    var data2 = new google.visualization.DataTable();
-    data2.addColumn('string', 'Name');
-    data2.addColumn('number', 'Commits');
-    data2.addRows([
-	{% for row in rows -%}
-		['{{ row.author }}/{{ row.name }}', {{ row.commits }}],
+    // Create the data table.
+    var data2 = new google.visualization.arrayToDataTable([
+  {% for row in rows -%}
+		['{{row.author}}/{{ row.name }}', {{ row.commits }}],
      	{% endfor %}
     ]);
 
     // Set chart options
-    var options = {};
+    var options = {'width':'100%','height':'100%'};
 
     var options2 = {
         title: 'Top trending GitHub repos',
         hAxis: {
           title: 'Repository name',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
         },
         vAxis: {
           title: 'Number of commits'
