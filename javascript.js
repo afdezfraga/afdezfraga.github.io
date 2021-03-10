@@ -47,8 +47,8 @@
 
     // Set chart options
     var options = {'title':'How Much Pizza I Ate Last Night',
-                   'width':100%,
-                   'height':100%};
+                   'width':'100%',
+                   'height':'100%'};
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.Table(document.getElementById('chart_div'));
