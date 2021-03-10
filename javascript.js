@@ -85,11 +85,6 @@
         title: 'Top trending GitHub repos',
         hAxis: {
           title: 'Repository name',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
         },
         vAxis: {
           title: 'Number of commits'
