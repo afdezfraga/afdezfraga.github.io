@@ -50,6 +50,20 @@ echo Por ejemplo:
 python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv ./afdezfragaSecrets.csv
 ```
 
+## Actualizar la visualizacion 
+
+### Requerimientos
+
+- Requiere instalar jinja2 para usar templates
+
+### Correr el script
+
+- Tras obtener los commits de cada repositorio ejecutaremos esto para actualizar el js
+
+ ``` sh
+python generateChart.py
+```
+
 ## GitHub Actions
 
 - Se ha definido una Action que cada día a las 0:00 actualice los datos de repositorios más populares y la visualización a través de GitHub Pages.

@@ -2,7 +2,7 @@ cd /home/afdezfraga.github.io
 
 git pull
 
-rm ./githubWithCommits.csv ./my_git_hub_spider/github.csv
+rm ./githubWithCommits.csv ./my_git_hub_spider/github.csv ./javascript.js
 
 cd my_git_hub_spider
 scrapy crawl GitHubSpider -o github.csv -t csv
@@ -14,7 +14,11 @@ python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv
 
 echo 'API ACABO'
 
-git add ./githubWithCommits.csv
+python generateChart.py
+
+echo 'JAVASCRIPT generado'
+
+git add ./githubWithCommits.csv ./javascript.js
 
 echo 'ADD COMPLETO, SE MOSTRARA EL ESTADO'
 
