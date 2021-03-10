@@ -87,9 +87,10 @@
           title: 'Number of commits',
         },
         vAxis: {
-          title: 'Author/Repository name'
+          title: 'Author/Repository name',
+          position: 'out'
         },
-        'width':'1200','height':'1100'
+        'width':'1100','height':'1100'
       };
 
     // Instantiate and draw our chart, passing in some options.
