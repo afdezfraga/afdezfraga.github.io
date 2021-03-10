@@ -49,3 +49,14 @@ python gitHubApiCaller.py <inputFile> <outputFile> <secretsFile>
 echo Por ejemplo: 
 python gitHubApiCaller.py ./my_git_hub_spider/github.csv ./githubWithCommits.csv ./afdezfragaSecrets.csv
 ```
+
+## GitHub Actions
+
+- Se ha definido una Action que cada día a las 0:00 actualice los datos de repositorios más populares y la visualización a través de GitHub Pages.
+- Además se ha definido en la Action el disparador *workflow_dispatch* para poder hacer tests manuales.
+- Toda la lógica necesaria para llevar a cabo la acción se ha hecho desde dentro de Docker.
+
+## Docker
+
+- La Action que hemos definido crea un contenedor Docker.
+- El contenedor hace **git pull** y ejecuta un script (*dockerScript.sh*) que se encuentra en la raíz del repositorio para conseguir los datos necesarios. Finalmente, con **git push** publica los cambios.
