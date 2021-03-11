@@ -2,6 +2,10 @@ version: 2.1
 
 workflows:
   main:
+    triggers:
+      - schedule:
+          cron: "20 11 * * *"
+
     jobs:
       - build:
           context: ContextoSeguro
