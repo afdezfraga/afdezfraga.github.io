@@ -50,31 +50,31 @@
     data2.addColumn('string', 'Name');
     data2.addColumn('number', 'Commits');
     data2.addRows([
-	['alievk/avatarify-python', 351],
-     	['dapr/dapr', 1615],
-     	['jart/cosmopolitan', 236],
-     	['tauri-apps/tauri', 970],
-     	['qeeqbox/social-analyzer', 433],
-     	['android/compose-samples', 978],
-     	['CoatiSoftware/Sourcetrail', 2735],
-     	['AliaksandrSiarohin/first-order-model', 70],
-     	['ethereum-mining/ethminer', 14334],
-     	['athensresearch/athens', 551],
-     	['rxi/lite', 200],
-     	['vitejs/vite', 2250],
-     	['JonnyBurger/remotion', 1010],
-     	['MostlyAdequate/mostly-adequate-guide', 846],
-     	['aamini/introtodeeplearning', 408],
-     	['input-output-hk/cardano-node', 4009],
-     	['bitwarden/server', 2825],
-     	['iperov/DeepFaceLab', 1144],
-     	['dani-garcia/bitwarden_rs', 1425],
-     	['Immediate-Mode-UI/Nuklear', 1857],
-     	['zhangdaiscott/jeecg-boot', 459],
-     	['geekxh/hello-algorithm', 360],
-     	['freqtrade/freqtrade', 11196],
-     	['iam-abbas/Reddit-Stock-Trends', 163],
-     	['airbnb/javascript', 1861],
+	['avatarify-python', 351],
+     	['dapr', 1615],
+     	['cosmopolitan', 236],
+     	['tauri', 970],
+     	['social-analyzer', 433],
+     	['compose-samples', 978],
+     	['Sourcetrail', 2735],
+     	['first-order-model', 70],
+     	['ethminer', 14334],
+     	['athens', 551],
+     	['lite', 200],
+     	['vite', 2250],
+     	['remotion', 1010],
+     	['mostly-adequate-guide', 846],
+     	['introtodeeplearning', 408],
+     	['cardano-node', 4009],
+     	['server', 2825],
+     	['DeepFaceLab', 1144],
+     	['bitwarden_rs', 1425],
+     	['Nuklear', 1857],
+     	['jeecg-boot', 459],
+     	['hello-algorithm', 360],
+     	['freqtrade', 11196],
+     	['Reddit-Stock-Trends', 163],
+     	['javascript', 1861],
      	
     ]);
 
@@ -84,11 +84,10 @@
     var options2 = {
         title: 'Top trending GitHub repos',
         hAxis: {
-          title: 'Number of commits',
+          title: 'Number of commits'
         },
         vAxis: {
-          title: 'Author/Repository name',
-          titlePosition: 'out'
+          title: 'Repository name'
         },
         'width':'1100','height':'1100'
       };
