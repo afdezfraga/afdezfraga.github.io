@@ -28,7 +28,7 @@
     data2.addColumn('number', 'Commits');
     data2.addRows([
 	{% for row in rows -%}
-		[{{ row.top }}'/{{ row.name }}', {{ row.commits }}],
+		['#{{ row.top }} {{ row.name }}', {{ row.commits }}],
      	{% endfor %}
     ]);
 
