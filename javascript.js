@@ -18,15 +18,15 @@
     data.addColumn('number', 'Commits');
     data.addRows([
 	[1, 'alievk', 'avatarify-python', 351],
-     	[2, 'dapr', 'dapr', 1614],
+     	[2, 'dapr', 'dapr', 1615],
      	[3, 'jart', 'cosmopolitan', 236],
-     	[4, 'tauri-apps', 'tauri', 969],
+     	[4, 'tauri-apps', 'tauri', 970],
      	[5, 'qeeqbox', 'social-analyzer', 433],
      	[6, 'android', 'compose-samples', 978],
      	[7, 'CoatiSoftware', 'Sourcetrail', 2735],
      	[8, 'AliaksandrSiarohin', 'first-order-model', 70],
      	[9, 'ethereum-mining', 'ethminer', 14334],
-     	[10, 'athensresearch', 'athens', 550],
+     	[10, 'athensresearch', 'athens', 551],
      	[11, 'rxi', 'lite', 200],
      	[12, 'vitejs', 'vite', 2250],
      	[13, 'JonnyBurger', 'remotion', 1010],
@@ -51,15 +51,15 @@
     data2.addColumn('number', 'Commits');
     data2.addRows([
 	['alievk/avatarify-python', 351],
-     	['dapr/dapr', 1614],
+     	['dapr/dapr', 1615],
      	['jart/cosmopolitan', 236],
-     	['tauri-apps/tauri', 969],
+     	['tauri-apps/tauri', 970],
      	['qeeqbox/social-analyzer', 433],
      	['android/compose-samples', 978],
      	['CoatiSoftware/Sourcetrail', 2735],
      	['AliaksandrSiarohin/first-order-model', 70],
      	['ethereum-mining/ethminer', 14334],
-     	['athensresearch/athens', 550],
+     	['athensresearch/athens', 551],
      	['rxi/lite', 200],
      	['vitejs/vite', 2250],
      	['JonnyBurger/remotion', 1010],
@@ -88,7 +88,7 @@
         },
         vAxis: {
           title: 'Author/Repository name',
-          position: 'out'
+          titlePosition: 'out'
         },
         'width':'1100','height':'1100'
       };
