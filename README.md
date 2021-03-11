@@ -75,6 +75,14 @@ python generateChart.py
 - La Action que hemos definido crea un contenedor Docker.
 - El contenedor hace **git pull** y ejecuta un script (*dockerScript.sh*) que se encuentra en la raíz del repositorio para conseguir los datos necesarios. Finalmente, con **git push** publica los cambios.
 
+## Gittyleaks
+
+- Utilizado para obtener secretos del propio repositorio y extraerlo a un archivo (*analisis.out*).
+
+ ``` sh
+gittyleaks -u afdezfraga -r afdezfraga.github.io -d -o -a -b -f > gittyleaks/analisis.out
+```
+
 ## CircleCI
 
 - Hacemos uso de CircleCI para que cada vez que se haga push en el repositorio, obtenemos los secretos encontrados en el propio repositorio.
