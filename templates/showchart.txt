@@ -42,7 +42,7 @@
         },
         vAxis: {
           title: 'Author/Repository name',
-          position: 'out'
+          titlePosition: 'out'
         },
         'width':'1100','height':'1100'
       };
