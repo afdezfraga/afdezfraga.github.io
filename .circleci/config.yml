@@ -4,10 +4,11 @@ workflows:
   main:
     triggers:
       - schedule:
-          cron: "20 11 * * *"
+          cron: '30 11 * * *'
           filters:
             branches:
               only:
+                - master
                 - main
 
     jobs:
