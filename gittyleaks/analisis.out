@@ -1,0 +1,11 @@
+--------------------------------------------------------------------------------
+                     gittyleaks' Bot Detective at work ...                      
+--------------------------------------------------------------------------------
+----------------------------------------
+[36mgitHubApiCaller.py[0m: SECRETS_URL = BASE_URL + "/search/code?q=token+[33muser[0m:{[33muser[0mname}"
+[36m.github/workflows/build.yml[0m: persist-[33mcredentials[0m: [31mfalse[0m
+[36mgitHubApiCaller.py[0m: ans3 = requests.get("https://api.github.com/search/code?q=token+[33muser[0m:[31mafdezfraga[0m", headers=BASE_HEADER)
+[36mgitHubApiCaller.py[0m: ans2 = requests.get("https://api.github.com/search/repositories?q=[33muser[0m:[31mafdezfraga[0m", headers=TMP_AUTH_HEADER)
+[36mgitHubApiCaller.py[0m: ans1 = requests.get("https://api.github.com/search/repositories?q=[33muser[0m:[31mafdezfraga[0m", headers=BASE_HEADER)
+[36mgitHubApiCaller.py[0m: answer = requests.get(SECRETS_URL.format([33musername[0m=[31muser),[0m BASE_HEADER)
+[36mDockerfile[0m: # ENV GITHUB_[33mTOKEN[0m=${{GITHUB_[33mTOKEN[0m}}
