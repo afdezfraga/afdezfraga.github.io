@@ -50,31 +50,31 @@
     data2.addColumn('string', 'Name');
     data2.addColumn('number', 'Commits');
     data2.addRows([
-	['avatarify-python', 351],
-     	['dapr', 1615],
-     	['cosmopolitan', 236],
-     	['tauri', 970],
-     	['social-analyzer', 433],
-     	['compose-samples', 978],
-     	['Sourcetrail', 2735],
-     	['first-order-model', 70],
-     	['ethminer', 14334],
-     	['athens', 551],
-     	['lite', 200],
-     	['vite', 2250],
-     	['remotion', 1010],
-     	['mostly-adequate-guide', 846],
-     	['introtodeeplearning', 408],
-     	['cardano-node', 4009],
-     	['server', 2825],
-     	['DeepFaceLab', 1144],
-     	['bitwarden_rs', 1425],
-     	['Nuklear', 1857],
-     	['jeecg-boot', 459],
-     	['hello-algorithm', 360],
-     	['freqtrade', 11196],
-     	['Reddit-Stock-Trends', 163],
-     	['javascript', 1861],
+	[1'/avatarify-python', 351],
+     	[2'/dapr', 1615],
+     	[3'/cosmopolitan', 236],
+     	[4'/tauri', 970],
+     	[5'/social-analyzer', 433],
+     	[6'/compose-samples', 978],
+     	[7'/Sourcetrail', 2735],
+     	[8'/first-order-model', 70],
+     	[9'/ethminer', 14334],
+     	[10'/athens', 551],
+     	[11'/lite', 200],
+     	[12'/vite', 2250],
+     	[13'/remotion', 1010],
+     	[14'/mostly-adequate-guide', 846],
+     	[15'/introtodeeplearning', 408],
+     	[16'/cardano-node', 4009],
+     	[17'/server', 2825],
+     	[18'/DeepFaceLab', 1144],
+     	[19'/bitwarden_rs', 1425],
+     	[20'/Nuklear', 1857],
+     	[21'/jeecg-boot', 459],
+     	[22'/hello-algorithm', 360],
+     	[23'/freqtrade', 11196],
+     	[24'/Reddit-Stock-Trends', 163],
+     	[25'/javascript', 1861],
      	
     ]);
 
@@ -89,7 +89,7 @@
         vAxis: {
           title: 'Repository name'
         },
-        'width':'1100','height':'1100'
+        'width':'1000','height':'1100'
       };
 
     // Instantiate and draw our chart, passing in some options.
