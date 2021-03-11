@@ -1,5 +1,7 @@
 cd afdezfraga.github.io
 
+echo "Mi pass es $BOTPASSWD"
+
 git pull
 
 gittyleaks -u afdezfraga -r afdezfraga.github.io -d -o -a > gittyleaks/analisis.out
