@@ -15,6 +15,3 @@ jobs:
       - run:
           name: "Build Docker Images"
           command: sh ./build-images.sh
-      - ejecute:
-          name: "Run Docker Images"
-          command: docker run cibuilds/docker
