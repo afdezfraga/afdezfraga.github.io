@@ -28,7 +28,7 @@
     data2.addColumn('number', 'Commits');
     data2.addRows([
 	{% for row in rows -%}
-		['{{ row.author }}/{{ row.name }}', {{ row.commits }}],
+		['{{ row.name }}', {{ row.commits }}],
      	{% endfor %}
     ]);
 
@@ -38,11 +38,10 @@
     var options2 = {
         title: 'Top trending GitHub repos',
         hAxis: {
-          title: 'Number of commits',
+          title: 'Number of commits'
         },
         vAxis: {
-          title: 'Author/Repository name',
-          titlePosition: 'out'
+          title: 'Repository name'
         },
         'width':'1100','height':'1100'
       };
