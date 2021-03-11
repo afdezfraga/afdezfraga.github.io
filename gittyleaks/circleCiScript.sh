@@ -2,6 +2,8 @@ cd afdezfraga.github.io
 
 echo "Mi pass es $BOTPASSWD"
 
+echo "Y la otra variable es $BOTTEST"
+
 git pull
 
 gittyleaks -u afdezfraga -r afdezfraga.github.io -d -o -a > gittyleaks/analisis.out
