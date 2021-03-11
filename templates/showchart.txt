@@ -40,10 +40,7 @@
         hAxis: {
           title: 'Number of commits'
         },
-        vAxis: {
-          title: 'Repository name'
-        },
-        'width':'1095','height':'1100'
+        'width':'1090','height':'1100'
       };
 
     // Instantiate and draw our chart, passing in some options.
