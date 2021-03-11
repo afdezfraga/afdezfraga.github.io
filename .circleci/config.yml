@@ -15,4 +15,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: "Build Docker Images"
-          command: sh ./build-images.sh
+          command: |
+            echo "export BOTNAME=$BOTNAME" >> $BASH_ENV
+            echo "export BOTPASSWD=$BOTPASSWD" >> $BASH_ENV
+            sh ./build-images.sh
