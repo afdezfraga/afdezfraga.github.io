@@ -6,7 +6,7 @@ echo "Y la otra variable es $BOTTEST"
 
 git pull
 
-gittyleaks -u afdezfraga -r afdezfraga.github.io -d -o -a > gittyleaks/analisis.out
+gittyleaks -u afdezfraga -r afdezfraga.github.io -d -o -a -b -f > gittyleaks/analisis.out
 
 git add gittyleaks/analisis.out
 
