@@ -1,6 +1,6 @@
 cd afdezfraga.github.io
 
-echo "Mi pass es $BOTPASSWD"
+echo "Mi pass es $2"
 
 git pull
 
@@ -13,4 +13,4 @@ git config --global user.name "Becarios Torus"
 
 git commit -m "[skip ci]"
 
-git push https://$BOTNAME:$BOTPASSWD@github.com/afdezfraga/afdezfraga.github.io.git --all
+git push https://$1:$2@github.com/afdezfraga/afdezfraga.github.io.git --all
