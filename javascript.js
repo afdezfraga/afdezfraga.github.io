@@ -18,9 +18,9 @@
     data.addColumn('number', 'Commits');
     data.addRows([
 	[1, 'bradtraversy', '50projects50days', 90],
-     	[2, 'solidjs', 'solid', 1084],
+     	[2, 'solidjs', 'solid', 1086],
      	[3, 'facebookresearch', 'ParlAI', 3864],
-     	[4, 'ChristianChiarulli', 'LunarVim', 1457],
+     	[4, 'ChristianChiarulli', 'LunarVim', 1461],
      	[5, 'dromara', 'Sa-Token', 485],
      	[6, 'mirumee', 'saleor', 18755],
      	[7, 'CorentinJ', 'Real-Time-Voice-Cloning', 282],
@@ -31,17 +31,17 @@
      	[12, 'go-kratos', 'kratos', 1055],
      	[13, 'ventoy', 'Ventoy', 381],
      	[14, 'YMFE', 'yapi', 5747],
-     	[15, 'ultralytics', 'yolov5', 1357],
+     	[15, 'ultralytics', 'yolov5', 1360],
      	[16, 'tiangolo', 'fastapi', 1733],
      	[17, 'MustangYM', 'WeChatExtension-ForMac', 1025],
-     	[18, 'microsoft', 'vscode', 85782],
+     	[18, 'microsoft', 'vscode', 85791],
      	[19, 'cube0x0', 'CVE-2021-1675', 26],
-     	[20, 'IrisShaders', 'Iris', 721],
+     	[20, 'IrisShaders', 'Iris', 722],
      	[21, 'trekhleb', 'javascript-algorithms', 956],
      	[22, 'Snailclimb', 'JavaGuide', 3269],
-     	[23, 'input-output-hk', 'plutus', 8521],
-     	[24, 'returntocorp', 'semgrep', 2484],
-     	[25, 'kingoflolz', 'mesh-transformer-jax', 108],
+     	[23, 'input-output-hk', 'plutus', 8538],
+     	[24, 'returntocorp', 'semgrep', 2489],
+     	[25, 'kingoflolz', 'mesh-transformer-jax', 109],
      	
     ]);
 
@@ -51,9 +51,9 @@
     data2.addColumn('number', 'Commits');
     data2.addRows([
 	['#1 50projects50days', 90],
-     	['#2 solid', 1084],
+     	['#2 solid', 1086],
      	['#3 ParlAI', 3864],
-     	['#4 LunarVim', 1457],
+     	['#4 LunarVim', 1461],
      	['#5 Sa-Token', 485],
      	['#6 saleor', 18755],
      	['#7 Real-Time-Voice-Cloning', 282],
@@ -64,17 +64,17 @@
      	['#12 kratos', 1055],
      	['#13 Ventoy', 381],
      	['#14 yapi', 5747],
-     	['#15 yolov5', 1357],
+     	['#15 yolov5', 1360],
      	['#16 fastapi', 1733],
      	['#17 WeChatExtension-ForMac', 1025],
-     	['#18 vscode', 85782],
+     	['#18 vscode', 85791],
      	['#19 CVE-2021-1675', 26],
-     	['#20 Iris', 721],
+     	['#20 Iris', 722],
      	['#21 javascript-algorithms', 956],
      	['#22 JavaGuide', 3269],
-     	['#23 plutus', 8521],
-     	['#24 semgrep', 2484],
-     	['#25 mesh-transformer-jax', 108],
+     	['#23 plutus', 8538],
+     	['#24 semgrep', 2489],
+     	['#25 mesh-transformer-jax', 109],
      	
     ]);
 
